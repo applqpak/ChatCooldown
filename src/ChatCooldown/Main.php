@@ -28,6 +28,15 @@
     public function onEnable()
     {
 
+      @mkdir($this->dataPath());
+
+      $this->cfg = new Config($this->dataPath() . "config.yml", Config::YAML, array("cooldown" => 5));
+
+    }
+
+    public function onChat(PlayerChatEvent $event)
+    {
+
     }
 
   }
