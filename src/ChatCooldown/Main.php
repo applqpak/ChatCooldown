@@ -57,7 +57,7 @@
 
           $timeDifference = (time() - $last_chat_time);
 
-          $player->sendMessage(str_replace(array("{name}", "{time}"), array($player_name, $timeDifference)));
+          $player->sendMessage(str_replace(array("{name}", "{time}"), array($player_name, $timeDifference), $cooldown_message));
 
           $event->setCancelled();
 
